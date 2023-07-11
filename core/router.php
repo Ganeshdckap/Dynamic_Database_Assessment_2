@@ -7,9 +7,7 @@ class router {
     {
         $this->controller = new controller();
     }
-
-
-
+    
     public function get($uri,$action){
         $this->router[] = [
             'uri' => $uri,
@@ -62,6 +60,9 @@ class router {
                             break;
                         case 'create_table':
                             $this->controller->create_table($_POST);
+                            break;
+                        case 'create_data':
+                            $this->controller->create_data($_POST);
                             break;
                         default :
                             $this->controller->index();

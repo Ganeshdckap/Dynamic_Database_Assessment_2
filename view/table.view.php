@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <form method="POST" action="/create_database" enctype="multipart/form-data">
+<form action="/create_table" method="post" enctype="multipart/form-data">
         <h3>Select Your Database</h3>
     <select name="dbname" id="dbname">
                             <option value="">select</option>
@@ -16,8 +16,8 @@
                             <option value="<?php echo$list->Database?>"><?php echo$list->Database?></option>
                             <?php endforeach;?>
                         </select> 
-                        <h3>Enter table name</h3>
-        <input type="text" name="tableName" placeholder="Enter table name" required>   
+                        <h3>Enter Table name</h3>
+        <input type="text" name="Table_Name" placeholder="Enter table name" required>   
         <table>
             <tr>
                 <th>#</th>
@@ -40,8 +40,8 @@ function addItem() {
 
     var html = "<tr>";
         html += "<td>" + items + "</td>";
-        html += "<td><input type='text' name='datatype[]'></td>";
-        html += "<td><select><option>int</option><option>Varchar</option><option>Text</option></select></td>";
+        html += "<td><input placeholder='Enter column name' type='text' name='column_name'></td>";
+        html += "<td><select name='data_type' id='data_type'><option name='data_type' value='int'>int</option><option name='data_type' value='varchar(255)'>varchar</option><option name='data_type' value='timestamp'>Date_Time</option></select></td>";
         html += "<td><button type='button' onclick='deleteRow(this);'>Delete</button></td>"
         html += "</tr>";
 

@@ -10,9 +10,12 @@
     
 
 <form action="/create_database" method="post" enctype="multipart/form-data">
- 
+<div class=" another db">
+        <?php if(isset($_SESSION['db_name_exists'])) :?>
+            <h2>This Database name ("<?php echo $_SESSION['db_name_exists'] ?>") already exists</h2>
+        <?php endif; ?>
+    </div>
             <h2>Create Your Database</h2>
-            <label for="dbname">Database</label>
             <input type="text" name="dbname" id="dbname" autocomplete="dbname" placeholder="Database Name">
             <button type="submit">Submit</button>
 </form>

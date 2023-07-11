@@ -4,8 +4,8 @@ function addItem() {
 
     var html = "<tr>";
         html += "<td>" + items + "</td>";
-        html += "<td><input type='text' name='datatype[]'></td>";
-        html += "<td><select><option>int</option><option>Varchar</option><option>Text</option></select></td>";
+        html += "<td><input placeholder='Enter column name' type='text' name='column_name'></td>";
+        html += "<td><select name='data_type' id='data_type'><option name='data_type' value='int'>int</option><option name='data_type' value='varchar(255)'>varchar</option><option name='data_type' value='timestamp'>Date_Time</option></select></td>";
         html += "<td><button type='button' onclick='deleteRow(this);'>Delete</button></td>"
         html += "</tr>";
 
@@ -16,5 +16,5 @@ function addItem() {
 function deleteRow(button) {
 items--
 button.parentElement.parentElement.remove();
-// first parentElement will be td and second will be tr.
+
 }

@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<form action="view/createdb.php" method="post" enctype="multipart/form-data">
 
+<form action="/create_database" method="post" enctype="multipart/form-data">
 <button type="submit">Create Database</button>
 </form>
+
 <form action="/create_table" method="post">
         <button type="submit">Create Table</button>
+</form>
+
+<form action="/create_data" method="post">
+        <button type="submit">Insert Value</button>
 </form>
 
 </body>
